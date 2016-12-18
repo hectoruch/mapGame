@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hectoruch"
+    "url": "git+https://github.com/hectoruch/mapGame"
   },
-  "author": "David Inga <david.inga@vizzuality.com>",
+  "author": "Hector Arce",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hectoruch/mapgame/issues"
+    "url": "https://github.com/hectoruch/mapGame/issues"
   },
   "homepage": "",
   "dependencies": {
