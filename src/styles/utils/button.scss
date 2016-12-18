@@ -1,0 +1,10 @@
+.butn {
+  padding: 10px 30px;
+  cursor: pointer;
+
+  &.-submit {
+    background-color: $color-secondary;
+    color: $white;
+    font-size: $font-family-secondary;
+  }
+}

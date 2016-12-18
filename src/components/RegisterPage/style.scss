@@ -1,0 +1,44 @@
+@import "../../styles/settings";
+
+.l-register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .diagonal {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    -webkit-transform: skewY(-12deg);
+    transform: skewY(-6deg);
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+    // background: -webkit-linear-gradient(300deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+    background: $color-primary;
+    position: absolute;
+    z-index: 2;
+    top: 10vh;
+  }
+
+  form {
+    background-color: $white;
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 4px solid $color-primary;
+
+    h2 {
+      font-size: $font-size-h2;
+    }
+
+    .butn {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      width: 50%;
+      float: right;
+    }
+  }
+}

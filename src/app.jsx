@@ -1,34 +1,31 @@
-import 'normalize.css';
-import './styles/lib/foundation.css';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, Link, browserHistory } from 'react-router';
+
 import './styles/index.scss';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Story from './components/Story';
+import HomePage from './components/HomePage';
+import RegisterPage from './components/RegisterPage';
 
-class AppComponent extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      scrollTop: 0
-    };
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', () => {
-      this.setState({ scrollTop: window.pageOffsetY });
-    });
-  }
-
+const App = React.createClass({
   render() {
     return (
-      <div>
-        <Story />
-      </div>
+      <HomePage />
     );
   }
+});
 
-}
+const Register = React.createClass({
+  render() {
+    return (
+      <RegisterPage />
+    );
+  }
+});
 
-ReactDOM.render(<AppComponent />, document.getElementById('app'));
+render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App} />
+    <Route path="register" component={Register} />
+  </Router>
+), document.getElementById('app'));
