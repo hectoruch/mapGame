@@ -10,17 +10,15 @@ class RegisterPage extends React.Component {
     const password = $('.password').val();
 
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
-      if (errorCode == 'auth/weak-password') {
-        alert('The password is too weak.');
+      if (errorCode === 'auth/weak-password') {
+        $('.message').removeClass('-hidden');
+        $('.message').html('The password is too weak.');
       } else {
-        alert(errorMessage);
+        $('.message').removeClass('-hidden');
+        $('.message').html(errorMessage);
       }
-        console.log(error);
-      // ...
     });
   }
 
@@ -33,6 +31,8 @@ class RegisterPage extends React.Component {
           <input type="email" className="input -text email" placeholder="Email" />
           <input type="password" className="input -text password" placeholder="Password" />
           <span className="butn -submit" onClick={(e) => this.onSubmit(e)}>Sign up!</span>
+          <p>Are you sign up? Sign in <Link to="login">here!</Link></p>
+          <div className="message -hidden">{''}</div>
         </form>
       </div>
     );
