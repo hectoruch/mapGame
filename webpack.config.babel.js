@@ -5,7 +5,7 @@ const path = require('path');
 
 const config = {
 
-  context: path.join(__dirname, 'src'),
+  context: path.join(__dirname, '/src'),
 
   entry: [
     './app.jsx'
