@@ -6,11 +6,20 @@ import './styles/index.scss';
 
 import HomePage from './components/HomePage';
 import RegisterPage from './components/RegisterPage';
+import LoginPage from './components/LoginPage';
 
 const App = React.createClass({
   render() {
     return (
       <HomePage />
+    );
+  }
+});
+
+const Login = React.createClass({
+  render() {
+    return (
+      <LoginPage />
     );
   }
 });
@@ -27,5 +36,6 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App} />
     <Route path="register" component={Register} />
+    <Route path="login" component={LoginPage} />
   </Router>
 ), document.getElementById('app'));
