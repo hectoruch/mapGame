@@ -11,6 +11,12 @@ const config = {
     './app.jsx'
   ],
 
+  devServer: {
+    historyApiFallback: {
+      disableDotRule: true
+    }
+  },
+
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
