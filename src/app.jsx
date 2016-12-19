@@ -4,7 +4,7 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 
 import './styles/index.scss';
 
-import HomePage from './components/HomePage';
+import HomePage from './components/homepage';
 import RegisterPage from './components/RegisterPage';
 
 const App = React.createClass({
