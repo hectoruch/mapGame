@@ -1,10 +1,25 @@
 .butn {
   padding: 10px 30px;
   cursor: pointer;
+  font-size: $font-family-secondary;
 
   &.-submit {
     background-color: $color-secondary;
     color: $white;
-    font-size: $font-family-secondary;
+  }
+
+  &.-facebook {
+    background-color: #3b5998;
+    color: $white;
+  }
+
+  &.-link {
+    padding: 0;
+    color: $white;
+    display: inline-block;
+
+    &::after {
+      display: none;
+    }
   }
 }

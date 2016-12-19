@@ -5,7 +5,7 @@
     position: relative;
 
     .content {
-      height: 85vh;
+      height: 100vh;
       position: relative;
       background-color: $color-primary;
       display: flex;
@@ -13,27 +13,44 @@
 
 
       div {
-        margin-bottom: 150px;
+        margin-bottom: 20px;
+
+        p {
+          font-size: $base-font-size;
+          color: $white;
+          max-width: 600px;
+          line-height: 1.6;
+          margin: 20px 0 0;
+        }
+
         h1 {
           color: $white;
           font-size: $font-size-h1;
+        }
+
+        .contain-button {
+          margin-top: 20px;
+          .butn {
+            &.-link {
+              margin-left: 40px;
+            }
+          }
+
         }
       }
     }
 
     .diagonal {
       width: 100%;
-      height: 140px;
+      height: 200px;
       overflow: hidden;
-      -webkit-transform: skewY(-12deg);
-      transform: skewY(-6deg);
+      transform: skewY(-8deg);
       -webkit-transform-origin: 0;
       transform-origin: 0;
-      // background: -webkit-linear-gradient(300deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
       background: #fff;
       position: absolute;
       z-index: 2;
-      top: 85vh;
+      top: 100vh;
     }
   }
 
