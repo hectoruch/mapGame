@@ -6,8 +6,12 @@
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 15px 50px;
+
+  img {
+    width: 50px;
+  }
 
   .contain-buttons {
     padding: 5px 20px 5px 5px;

@@ -19,6 +19,12 @@ a {
     height: 2px;
     background-color: $color-secondary;
   }
+
+  &.-no-underline {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 button {
