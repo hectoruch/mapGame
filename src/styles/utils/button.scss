@@ -6,11 +6,13 @@
   &.-submit {
     background-color: $color-secondary;
     color: $white;
+    border-radius: $border-radius;
   }
 
   &.-facebook {
     background-color: #3b5998;
     color: $white;
+        border-radius: $border-radius;
   }
 
   &.-link {

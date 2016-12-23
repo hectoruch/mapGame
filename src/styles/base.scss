@@ -19,4 +19,30 @@ a {
     height: 2px;
     background-color: $color-secondary;
   }
+
+  &.-no-underline {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+button {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-base;
+}
+
+p,
+a,
+button,
+input {
+  font-family: $font-family-secondary;
 }
