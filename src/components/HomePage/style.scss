@@ -10,7 +10,7 @@
       background-color: $color-primary;
       display: flex;
       align-items: center;
-      padding: 0 50px;
+      padding: 0 100px;
 
 
       div {
@@ -48,7 +48,7 @@
       transform: skewY(-4deg);
       -webkit-transform-origin: 0;
       transform-origin: 0;
-      background: #fff;
+      background: $body;
       position: absolute;
       z-index: 2;
       top: 100vh;

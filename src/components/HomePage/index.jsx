@@ -1,3 +1,4 @@
+import _ from 'underscore';
 import React from 'react';
 import Menu from '../Menu';
 import $ from 'jquery';
@@ -6,10 +7,24 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 
 class HomePage extends React.Component{
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollTop: 0,
+      direction: false
+    };
+  }
+
+  componentDidMount() {
+   window.addEventListener('scroll', _.debounce(() => {
+     this.setState({ scrollTop: window.pageYOffset });
+   }, 1));
+  }
+
   render() {
     return (
       <div className="l-home-page">
-        <Menu />
+        <Menu scrollTop={this.state.scrollTop} />
         <header>
           <div className="diagonal">{''}</div>
           <div className="content">
