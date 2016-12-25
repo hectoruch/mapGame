@@ -27,6 +27,7 @@ class Profile extends React.Component{
         <Menu scrollTop={this.state.scrollTop} />
         <div className="diagonal">{''}</div>
         <div className="l-profile-page wrap">
+          <h2>Hi! This is your profile.</h2>
           <div className="tabs">
             <button type="button" className="-selected">My maps</button>
             <button type="button">Games I´ve played</button>

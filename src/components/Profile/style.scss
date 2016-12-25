@@ -4,6 +4,11 @@
   top: 250px;
   position: relative;
 
+  h2 {
+    font-size: $font-size-h2;
+    margin-bottom: 20px;
+  }
+
   button {
     margin-right: 20px;
     font-family: $font-family-secondary;
