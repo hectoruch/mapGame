@@ -1,8 +1,9 @@
+import { Link } from 'react-router';
+import $ from 'jquery';
 import React from 'react';
 import Menu from '../Menu';
-import $ from 'jquery';
 import './style.scss';
-import { Router, Route, Link, browserHistory } from 'react-router';
+
 
 class LoginPage extends React.Component {
 
@@ -16,10 +17,10 @@ class LoginPage extends React.Component {
       var errorMessage = error.message;
       // ...
     }).then(function () {
-      let user = firebase.auth().currentUser;
-      let email;
+      const user = firebase.auth().currentUser;
+      let emailUser = '';
       if (user != null) {
-        email = user.email;
+        emailUser = user.email;
       }
     });
   }
@@ -40,7 +41,7 @@ class LoginPage extends React.Component {
       let email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       let credential = error.credential;
-        // ...
+
     });
   }
 

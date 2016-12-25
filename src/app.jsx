@@ -1,41 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 
 import './styles/index.scss';
 
 import HomePage from './components/HomePage';
 import RegisterPage from './components/RegisterPage';
 import LoginPage from './components/LoginPage';
-
-const App = React.createClass({
-  render() {
-    return (
-      <HomePage />
-    );
-  }
-});
-
-const Login = React.createClass({
-  render() {
-    return (
-      <LoginPage />
-    );
-  }
-});
-
-const Register = React.createClass({
-  render() {
-    return (
-      <RegisterPage />
-    );
-  }
-});
+import Profile from './components/Profile';
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App} />
-    <Route path="register" component={Register} />
+    <Route path="/" component={HomePage} />
+    <Route path="register" component={RegisterPage} />
     <Route path="login" component={LoginPage} />
+    <Route path="profile" component={Profile} />
   </Router>
 ), document.getElementById('app'));

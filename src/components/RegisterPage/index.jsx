@@ -1,13 +1,14 @@
+import $ from 'jquery';
+import { Link } from 'react-router';
 import React from 'react';
 import Menu from '../Menu';
-import $ from 'jquery';
 import './style.scss';
-import { Router, Route, Link, browserHistory } from 'react-router';
+
 
 class RegisterPage extends React.Component {
 
   onSubmitEmail(e) {
-    var user = {
+    const user = {
       email: $('.email').val(),
       password: $('.password').val()
     };
@@ -23,16 +24,16 @@ class RegisterPage extends React.Component {
         $('.message').html(errorMessage);
       }
     }).then(function () {
-      let user = firebase.auth().currentUser;
-      let email;
-      if (user != null) {
-        email = user.email;
+      const userLogin = firebase.auth().currentUser;
+      let emailUser = ''
+      if (userLogin != null) {
+        emailUser = user.email;
       }
     });
   }
 
   onSubmitFacebook(e) {
-    let providerFacebook = new firebase.auth.FacebookAuthProvider();
+    const providerFacebook = new firebase.auth.FacebookAuthProvider();
 
     firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
@@ -50,11 +51,10 @@ class RegisterPage extends React.Component {
         // ...
     })
     .then(function () {
-      let user = firebase.auth().currentUser;
+      const user = firebase.auth().currentUser;
       let email;
       if (user != null) {
         email = user.email;
-        console.log(email);
       }
     });
   }

@@ -1,13 +1,14 @@
-@import "../../styles/settings";
+@import '../../styles/settings';
 
 .c-menu {
-  position: fixed;
-  width: 100%;
-  z-index: 5;
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 50px;
+  width: 100%;
+  padding: 15px 100px;
+  transition: $animation-cubic;
+  z-index: 5;
 
   img {
     width: 50px;
@@ -15,15 +16,22 @@
 
   .contain-buttons {
     padding: 5px 20px 5px 5px;
-    background-color: $white;
     border-radius: $border-radius;
+    background-color: $white;
+
     .butn {
       &.-submit {
         margin-right: 20px;
       }
+
       &.-link {
         color: $black;
       }
     }
+  }
+
+  &.-white {
+    background-color: $white;
+    box-shadow: 0 1px 0 0 rgba($black, .1);
   }
 }

@@ -3,10 +3,12 @@ $color-primary: #44cfea;
 $color-secondary: #00ccbc;
 
 $black: #333;
-$white: #ffffff;
+$white: #fff;
 $red: #ff5f5f;
 
 $facebook: #3b5998;
+
+$body: #fdfdfd;
 
 //Fonts
 $base-font-color: $white;
@@ -32,3 +34,7 @@ $large-margin: 80px;
 
 
 $border-radius: 3px;
+
+// Animation
+$animation-cubic: .2s cubic-bezier(.31, .57, .72, .43);
+$cubic: cubic-bezier(.31, .57, .72, .43);

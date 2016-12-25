@@ -1,33 +1,32 @@
-@import "../../styles/settings";
+@import '../../styles/settings';
 
 .l-register-page {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 
   .diagonal {
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 300px;
-    overflow: hidden;
-    transform: skewY(-8deg);
-    -webkit-transform-origin: 0;
+    height: 250px;
+    transform: skewY(-4deg);
     transform-origin: 0;
     background: $color-primary;
-    position: absolute;
+    overflow: hidden;
     z-index: 2;
-    top: calc((100vh / 2) - 350);
   }
 
   form {
-    background-color: $white;
-    z-index: 2;
-    padding: 20px;
+    position: relative;
     width: 100%;
     max-width: 450px;
+    padding: 20px;
     border: 4px solid $color-primary;
-    position: relative;
     border-radius: $border-radius;
+    background-color: $white;
+    z-index: 2;
 
     .contain-submit {
       display: flex;
@@ -35,18 +34,18 @@
 
       .butn {
         display: block;
-        text-align: center;
-        margin-top: 20px;
         width: 45%;
+        margin-top: 20px;
+        text-align: center;
       }
     }
 
     p {
       display: block;
-      font-size: $small-font;
-      text-align: right;
       margin-top: 20px;
       margin-bottom: 0;
+      font-size: $small-font;
+      text-align: right;
     }
 
     h2 {
@@ -55,18 +54,18 @@
 
     .message {
       position: absolute;
-      background-color: $red;
+      bottom: -35px;
+      left: 0;
       width: 100%;
       padding: 6px;
+      transition: .6s $cubic;
+      background-color: $red;
       color: $white;
-      left: 0;
-      bottom: -35px;
       font-size: $small-font;
-      transition: .6s ease;
 
       &.-hidden {
-        opacity: 0;
         bottom: -30px;
+        opacity: 0;
       }
     }
   }
