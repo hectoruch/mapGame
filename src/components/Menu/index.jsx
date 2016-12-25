@@ -1,13 +1,11 @@
+import React from 'react';
+import { Link } from 'react-router';
 import whiteLogo from './assets/logoWhite.png';
 import whiteDark from './assets/mapGame.png';
-
-import React from 'react';
-import $ from 'jquery';
 import './style.scss';
-import { Router, Route, Link, browserHistory } from 'react-router';
 
 
-class Menu extends React.Component{
+class Menu extends React.Component {
 
   componentDidMount() {
   }
@@ -38,5 +36,9 @@ class Menu extends React.Component{
   }
 
 }
+
+Menu.propTypes = {
+  scrollTop: React.PropTypes.number,
+};
 
 export default Menu;

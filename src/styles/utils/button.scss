@@ -1,24 +1,24 @@
 .butn {
   padding: 10px 30px;
-  cursor: pointer;
   font-size: $font-family-secondary;
+  cursor: pointer;
 
   &.-submit {
+    border-radius: $border-radius;
     background-color: $color-secondary;
     color: $white;
-    border-radius: $border-radius;
   }
 
   &.-facebook {
-    background-color: #3b5998;
+    border-radius: $border-radius;
+    background-color: $facebook;
     color: $white;
-        border-radius: $border-radius;
   }
 
   &.-link {
+    display: inline-block;
     padding: 0;
     color: $white;
-    display: inline-block;
 
     &::after {
       display: none;

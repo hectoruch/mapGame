@@ -1,11 +1,10 @@
 .input {
-
   &.-text {
-    line-height: normal;
     display: block;
     width: 100%;
+    margin-top: 30px;
     padding: 10px;
     outline: 0;
-    margin-top: 30px;
+    line-height: normal;
   }
 }

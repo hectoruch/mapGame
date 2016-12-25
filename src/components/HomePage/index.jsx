@@ -1,11 +1,10 @@
 import _ from 'underscore';
+import { Link } from 'react-router';
 import React from 'react';
 import Menu from '../Menu';
-import $ from 'jquery';
 import './style.scss';
-import { Router, Route, Link, browserHistory } from 'react-router';
 
-class HomePage extends React.Component{
+class HomePage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -16,9 +15,9 @@ class HomePage extends React.Component{
   }
 
   componentDidMount() {
-   window.addEventListener('scroll', _.debounce(() => {
-     this.setState({ scrollTop: window.pageYOffset });
-   }, 1));
+    window.addEventListener('scroll', _.debounce(() => {
+      this.setState({ scrollTop: window.pageYOffset });
+    }, 1));
   }
 
   render() {

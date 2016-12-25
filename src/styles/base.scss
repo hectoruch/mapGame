@@ -1,13 +1,15 @@
 body {
-  color: $black;
   background-color: $body;
+  color: $black;
+
 }
 
 .wrap {
   width: 100%;
   max-width: 1080px;
-  padding: 0 20px;
   margin: 0 auto;
+  padding: 0 20px;
+
 }
 
 a {
@@ -15,10 +17,10 @@ a {
 
   &::after {
     display: block;
-    content: '';
     width: 100%;
     height: 2px;
     background-color: $color-secondary;
+    content: '';
   }
 
   &.-no-underline {
